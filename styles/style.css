@@ -1,3 +1,12 @@
+:root {
+  /*-------------------variables--------------------------*/
+
+  --light-out-text: #111827;
+  --red: #C92D2D;
+}
+
+
+
 * {
   box-sizing: content-box;
   padding: 0%;
@@ -40,6 +49,7 @@ nav {
   top: 0;
   background-color: white;
   z-index: 500; /*Used so nothing goes on top of the nav bar*/
+  /* margin: 0px 30px; */
 }
 
 nav ul{
@@ -60,13 +70,35 @@ nav ul{
   } */
 }
 
+.nav-logo {
+  width: 30%;
+  display: flex;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 150px;
+}
+
+.nav-actions {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: 50px; */
+  /* gap: 10px; */
+}
+
 .logo-li img {
   width: 10%;
 }
 
 
 nav ul li button {
-  background-color: #C92D2D;
+  background-color: var(--red);
   color: white;
   padding: 10px;
   border: 1px solid white;
@@ -130,7 +162,7 @@ nav ul li button {
 .search-bar button{
   position: absolute;
   color: white;
-  background-color: #C92D2D;
+  background-color: var(--red);
   aspect-ratio: 1;
   right: 0px;
   padding: 0px 30px;
@@ -386,7 +418,7 @@ nav ul li button {
 }
 
 .add-business-button {
-  background-color: #C92D2D;
+  background-color: var(--red);
   border-color: transparent;
 }
 
@@ -441,18 +473,21 @@ nav ul li button {
 
 .pricing-section-grid-item {
   display: flex;
+  border: 0.1px solid #E5E5E5;
 }
 
 .pricing-section-grid-item img {
-  width: 150px;
+  /* width: 350px; */
   border-radius: 10px;
   margin-right: 15px;
+  /* object-fit: cover; */
 }
 
 .pricing-section-grid-item-text{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .pricing-section-grid-item-text div p{
@@ -460,8 +495,9 @@ nav ul li button {
 }
 
 .pricing-section-grid-item-text  button {
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 10px;
+  max-width: 100px;
 }
 
 /*-----------------------------------------------------footer------------------------------------------------*/
@@ -495,7 +531,7 @@ footer {
 
 .newsletter button {
   color: white;
-  background-color: #C92D2D;
+  background-color: var(--red);
   border-color: transparent;
   padding: 10px 15px;
   border-radius: 10px;
@@ -513,8 +549,15 @@ footer {
   margin-bottom: 30px;
 }
 
+.finder-icon-section img {
+  width: 8%;
+}
+
 .finder-title {
   font-size: x-large;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .finder-p {
@@ -522,10 +565,22 @@ footer {
   font-size: medium;
 }
 
+.links .media-icons {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
 .links .media-icons i{
-  background-color: grey;
+  background-color: #4e55627d;
   padding: 10px;
   border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #4E5562;
+  }
 }
 
 
@@ -561,19 +616,33 @@ footer {
 
 
 /*----------------------------------------------------------------cities------------------------------------------------*/
+.cities h4 {
+  width: 10%;
+  font-size: larger ;
+  padding-top: 6px;
+}
 .cities {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+  align-items: start;
   margin: 40px 40px;
+  /* gap: 15px; */
 }
 
-.cities button {
+.cities-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 10px;
+}
+
+.cities-buttons button {
   background-color: transparent;
   color: white;
-  padding: 5px 20px;
+  padding: 10px 30px;
   border-radius: 15px;
+  border-color: #333d4c;
 }
 
 /*------------------------------------------------------------rights section-------------------------------------------*/
