@@ -326,6 +326,7 @@ nav ul li button {
 .expert-advice-grid-item img {
   width: 150px;
   border-radius: 10px;
+  max-height: 150px;
 }
 
 .expert-advice-grid-text {
@@ -477,10 +478,9 @@ nav ul li button {
 }
 
 .pricing-section-grid-item img {
-  /* width: 350px; */
+  width: 250px;
   border-radius: 10px;
   margin-right: 15px;
-  /* object-fit: cover; */
 }
 
 .pricing-section-grid-item-text{
