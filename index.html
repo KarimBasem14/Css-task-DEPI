@@ -7,10 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/darkmode.js" defer></script>
+    <script type="text/javascript" src="scripts/verticalSideBar.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="hamburger">
+    <nav class="vertical-nav-bar">
+        <div class="vertical-nav-bar-title">
+            <h2>Browse Finder</h2>
+            <i class="fa fa-times"></i>
+        </div>
+        <ul class="vertical-nav-bar-links">
+            <li>Home</li>
+            <li>Listings</li>
+            <li>Account</li>
+            <li>Pages</li>
+            <li>Docs</li>
+            <li>Components</li>
+        </ul>
+
+        
+    </nav>
+    <nav class="horizontal-nav-bar">
+        <div id="hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
