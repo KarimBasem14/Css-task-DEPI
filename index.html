@@ -6,42 +6,63 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/darkmode.js" defer></script>
 </head>
 <body>
     <nav>
-        <ul>
-            <div class="nav-logo">
-                <li class="logo-li">
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-logo">
                 <img src="imgs/projects/finder logo.png" alt="">
                 <h2>Finder</h2>
-            </li>
-            </div>
-            <div class="nav-links">
-                <li>Home</li>
-                <li>Listings</li>
-                <li>Account</li>
-                <li>Pages</li>
-                <li>Docs</li>
-                <li>Components</li>
-            </div>
-
-            <div class="nav-actions">
-                <li><i class="fa-regular fa-sun"></i></li>
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><button>+ Join Pro Network</button></li>
-            </div>
+        </div>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Listings</li>
+            <li>Account</li>
+            <li>Pages</li>
+            <li>Docs</li>
+            <li>Components</li>
+        </ul>
+        <ul class="nav-actions">
+            <li id="theme-switch"><i class="fa-regular fa-moon"></i><i class="fa-regular fa-sun"></i></li>
+            <li><i class="fa-regular fa-user"></i></li>
+            <li><button></button></li>
         </ul>
     </nav>
 
     <main>
         <section class="landing">
             <p>Explore top-rated<br> certified pros nearby</p>
+
             <div class="search-bar">
+                <div class="search-bar-row">
+                    <div class="service-search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="What service do you need?">
+                    </div>
+
+                    <div class="zip-code-search-bar">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Zip code">
+                    </div>
+                </div>
+
+                <div class="search-button">
+                    <button>Search</button>
+                </div>
+
+            </div>
+
+            <!-- <div class="search-bar">
 
                 <input type="text" placeholder="What service do you need?">
                 
                 <button>Search</button>
-            </div>
+            </div> -->
 
             <ul>
                 <li>Handyperson</li>
