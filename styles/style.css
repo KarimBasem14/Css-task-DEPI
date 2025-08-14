@@ -8,6 +8,12 @@
   --button-right-left-padding: 30px;
   --link-hover-color: rgb(208, 206, 206);
 
+  --primary-color: #400040;
+  --success-color: #400040;
+  --warning-color:#fc9231;
+  --danger-color:#f03d3d;
+  --info-color:#3d7a81;
+
   /*---------------light-mode------------------------------*/
   --text-color: black;
   --background-color: white;
@@ -25,6 +31,8 @@
 html, body {
     /* max-width: 100%; */
     /* Remove overflow-x: hidden as it breaks position: sticky */
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -45,6 +53,32 @@ main {
 
 ul {
   list-style: none;
+}
+
+svg {
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+/*-----------------------------customize button--------------------------------------*/
+
+#customize-button {
+  rotate: -90deg;
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  right: 10px;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px){
+  #customize-button {
+    right: -30px;
+  }
 }
 
 /*-----------------------------section titles------------------------------*/
@@ -76,7 +110,78 @@ ul {
   }
 }
 
+/*--------------------------------------------Customization page----------------------------------------------*/
 
+.customization-page {
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 350px;
+  /* padding: 20px; */
+  
+  /* Animation properties */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+
+  overflow-y: scroll;
+}
+
+.customization-page.visible {
+  transform: translateX(0); /* Slide in to original position */
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.customization-page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  border: 1px solid transparent;
+  border-bottom-color: grey;
+  padding: 20px;
+}
+
+/*--------------------------------------------color selection tab---------------------------*/
+.colors-tab {
+  padding: 20px;
+}
+.colors-tab h3{
+  margin-bottom: 10px;
+}
+
+.colors-tab-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap:5px;
+}
+
+.color-choice {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--light-out-text);
+  border-radius: 5px;
+}
+
+.color-choice input {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border-color: transparent;
+  cursor: pointer;
+}
 
 
 /*---------------------------------------------Vertical Navigation Bar-------------------------------------------------------*/
@@ -219,7 +324,7 @@ ul {
 
 
 .nav-actions li button {
-  background-color: var(--un-highlighted-red);
+  background-color: var(--primary-color);
   color: white;
   padding: 10px;
   border: 1px solid transparent;
@@ -295,6 +400,41 @@ ul {
   }
 }
 
+/* iPhone SE and similar small devices */
+@media (max-width: 375px) {
+  .horizontal-nav-bar {
+    padding: 15px 10px;
+  }
+  
+  .nav-actions {
+    gap: 10px;
+  }
+  
+  .nav-actions li button::before {
+    content: "+ Join";
+  }
+  
+  /* Reduce margins for all sections */
+  .your-area,
+  .popular-home-projects,
+  .expert-advice,
+  .working-section,
+  .mobile-app-section,
+  .pricing-section {
+    margin: 50px 15px;
+  }
+  
+  .projects-area {
+    margin: 0px 15px;
+  }
+  
+  /* Make vertical nav bar responsive */
+  .vertical-nav-bar {
+    width: 90vw;
+    max-width: 300px;
+  }
+}
+
 #theme-switch i:first-child{
   display: none;
 }
@@ -310,7 +450,7 @@ ul {
 /*-----------------------------------------------------------landing-------------------------------------------------*/
 
 .landing {
-  background-color: #3D7A81;
+  background-color: var(--info-color);
   color: white;
   /* padding: 15px; */
   display: flex;
@@ -369,7 +509,11 @@ ul {
 }
 
 .service-search-bar {
-  border-right: 1px solid #929395;
+  width: 300px;
+}
+
+.zip-code-search-bar{
+  border-left: 1px solid #929395;
 }
 
 .search-bar-row {
@@ -383,7 +527,7 @@ ul {
 .search-button button{
   /* border: 1px solid blue; */
   color: white;
-  background-color: var(--highlighted-red);
+  background-color: var(--primary-color);
   padding: 15px 30px;
   border-radius: 10px;
   cursor: pointer;
@@ -398,39 +542,6 @@ ul {
   }
 }
 
-/* .search-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
-}
-
-.search-bar input {
-  border-radius: 10px;
-  
-  padding: 30px;
-  width: 50%;
-  
-}
-
-.search-button button{
-  position: absolute;
-  height: 50px;
-  color: white;
-  background-color: var(--un-highlighted-red);
-  aspect-ratio: 1;
-  right: 0px;
-  padding: 0px 30px;
-  margin-right: 27%;
-  border-radius: 10px;
-  border: white;
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--highlighted-red);
-  }
-} */
 
 .landing ul {
   display: flex;
@@ -490,6 +601,7 @@ ul {
   }
   .zip-code-search-bar{
     width: 100%;
+    border: transparent;
   }
 }
 
@@ -576,7 +688,7 @@ ul {
 
 
 .fa-star {
-  color: orange;
+  color: var(--warning-color);
   margin-right: 5px;
 }
 
@@ -663,6 +775,15 @@ ul {
   border-radius: 10px;
 }
 
+@media(max-width: 600px){
+  .popular-home-projects-row{
+    flex-direction: column;
+  }
+  .popular-home-projects-row img {
+    width: 80vw;
+  }
+}
+
 /*---------------------------------------Expert advice section-------------------------------------------------------*/
 
 .expert-advice {
@@ -709,6 +830,18 @@ ul {
   max-lines: 2;
 }
 
+@media (max-width: 800px){
+  .expert-advice-grid-item, .expert-advice-grid{
+    flex-direction: column;
+  } 
+}
+
+
+@media (max-width:600px){
+  .expert-advice-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /*------------------------------------------------------working section-----------------------------------------------*/
 .working-section {
@@ -746,23 +879,31 @@ ul {
 /*---------------------------------------pro section----------------------------------------------------------------*/
 
 .pro-section {
-  background-color: #3D7A81;
+  background-color: var(--info-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px 0px 0px 40px;
-  
+  width: 100%;
+  gap: 50px;
 }
 
+.pro-section-right {
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  justify-content: flex-end;
+}
 
 .pro-section-right img {
-  max-height: 400px;
-
+  width: 100%; /* Takes full width of its container */
+  /* max-width: 500px; Optional: set a maximum size */
+  /* height: auto; Maintains aspect ratio */
 }
 
 .pro-section-left {
   color: white;
+  margin: 40px 0px;
 }
 
 .pro-section-left h1 {
@@ -777,7 +918,7 @@ ul {
 }
 
 .add-business-button {
-  background-color: var(--un-highlighted-red);
+  background-color: var(--primary-color);
   border-color: transparent;
 
 
@@ -790,6 +931,23 @@ ul {
 .learn-more-button {
   background-color: transparent;
   border: 1px white solid;
+}
+
+@media (max-width: 1000px) {
+  .pro-section-right img{
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .pro-section-right img{
+    display: none;
+  }
+
+  .pro-section-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*---------------------------------------mobile app section-------------------------------------------------------*/
@@ -813,6 +971,7 @@ ul {
 .mobile-app-section img {
   height: 420px;
   width: 720px;
+  max-width: 100%; /* Prevent overflow */
 } 
 
 .mobile-app-section-text p{
@@ -830,6 +989,7 @@ ul {
   .mobile-app-section img {
     height: 420px;
     width: 520px;
+    max-width: 100%;
   }
 }
 
@@ -839,11 +999,29 @@ ul {
   }
 
   .mobile-app-section-text{
-    padding: 40px;
+    padding: 40px 20px;
   }
 
   .mobile-app-section img {
     max-height: 200px;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-app-section {
+    margin: 50px 15px;
+  }
+  
+  .mobile-app-section-text {
+    padding: 20px 15px;
+  }
+  
+  .mobile-app-section img {
+    max-height: 150px;
+    width: auto;
+    max-width: 90%;
   }
 }
 
@@ -866,6 +1044,7 @@ ul {
 
 .pricing-section-grid-item img {
   width: 250px;
+  max-width: 150px; /* Limit width on small screens */
   border-radius: 10px;
   margin-right: 15px;
 }
@@ -887,6 +1066,32 @@ ul {
   max-width: 100px;
 }
 
+/* Responsive pricing section */
+@media (max-width: 600px) {
+  .pricing-section-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pricing-section-grid-item img {
+    width: 120px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pricing-section-grid-item {
+    flex-direction: column;
+  }
+  
+  .pricing-section-grid-item img {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
 /*-----------------------------------------------------footer------------------------------------------------*/
 
 footer {
@@ -900,6 +1105,21 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 60px 40px;
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .newsletter {
+    padding: 30px 15px;
+  }
 }
 
 .newsletter p {
@@ -918,7 +1138,7 @@ footer {
 
 .newsletter button {
   color: white;
-  background-color: var(--highlighted-red);
+  background-color: var(--primary-color);
   border-color: transparent;
   padding: 10px 15px;
   border-radius: 10px;
@@ -930,6 +1150,20 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 40px 40px;
+}
+
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .links {
+    margin: 30px 15px;
+  }
 }
 
 .finder-icon-section  p{

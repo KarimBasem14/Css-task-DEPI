@@ -5,7 +5,7 @@ hamburger.onclick = () => {
     verticalNavBar.classList.toggle("visible");
 }
 
-let closeButton = document.querySelector(".fa-times");
+let closeButton = document.querySelector(".vertical-nav-bar-title .fa-times");
 
 closeButton.onclick = () => {
     let verticalNavBar = document.querySelector(".vertical-nav-bar");
