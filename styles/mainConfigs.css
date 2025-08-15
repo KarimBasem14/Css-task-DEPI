@@ -1,0 +1,109 @@
+:root {
+  /*-------------------variables--------------------------*/
+
+  --light-out-text: #111827;
+  --un-highlighted-red: #c92d2dda;
+  --highlighted-red: #C92D2D;
+  --button-top-bottom-padding: 15px;
+  --button-right-left-padding: 30px;
+  --link-hover-color: rgb(208, 206, 206);
+  --border-width: 1px;
+  --border-radius: 0.5px
+
+
+  --primary-color: #400040;
+  --success-color: #400040;
+  --warning-color:#fc9231;
+  --danger-color:#f03d3d;
+  --info-color:#3d7a81;
+
+  /*---------------light-mode------------------------------*/
+  --text-color: black;
+  --background-color: white;
+
+
+  /*--------------dark-mode-------------------------------*/
+
+}
+
+.darkmode{
+  --text-color: white;
+  --background-color: #111827;
+}
+
+html.lock-scroll {
+  overflow: hidden;
+}
+
+html, body {
+    /* max-width: 100%; */
+    /* Remove overflow-x: hidden as it breaks position: sticky */
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}/*# sourceMappingURL=style.css.map */
+
+ul {
+  list-style: none;
+}
+
+svg {
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+i {
+  margin-right: 5px;
+}
+
+/*-----------------------------section titles------------------------------*/
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section-title p {
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.section-title a {
+  text-decoration: none;
+  color: black;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 500px){
+  .section-title p {
+    font-size: x-large;
+  }
+}

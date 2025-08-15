@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/master.css">
     <script type="text/javascript" src="scripts/darkmode.js" defer></script>
     <script type="text/javascript" src="scripts/verticalSideBar.js" defer></script>
     <script type="text/javascript" src="scripts/customization.js" defer></script>
     <script type="text/javascript" src="scripts/colorSelection.js" defer></script>
+    <script type="text/javascript" src="scripts/rangeSlider.js" defer></script>
 </head>
 <body>
     <button id="customize-button">
@@ -22,7 +23,8 @@
             <h2>Customize theme</h2>
             <i class="fa fa-times"></i>
         </div>
-        <div class="colors-tab">
+        <div class="customization-page-body">
+            <div class="colors-tab">
             <h3><i class="fa-solid fa-swatchbook"></i>Colors</h3>
             <div class="colors-tab-row">
                 <div class="color-selection">
@@ -64,13 +66,29 @@
 
         </div>
         <div class="direction-tab">
-
+            <h3><i class="fa-solid fa-arrow-right"></i>Direction</h3>
+            <div class="rtl-container">
+                <p>RTL <br>Change text direction</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
         <div class="border-width-tab">
-
+            <h3><i class="fa-solid fa-bars"></i>Border width, px</h3>
+            <div class="border-width-slider-container slider-container">
+                <input id="border-width-slider" type="range" min="0" max="10" value="1">
+                <p></p>
+            </div>
         </div>
         <div class="rounding-tab">
-
+            <h3><i class="fa-solid fa-maximize"></i>Rounding, rem</h3>
+            <div class="rounding-slider-container slider-container">
+                <input id="rounding-slider" type="range" min="0" max="5" value="1" >
+                <p></p>
+            </div>
+        </div>
         </div>
 
         <div class="customization-page-footer">
