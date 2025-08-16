@@ -8,7 +8,7 @@
   --button-right-left-padding: 30px;
   --link-hover-color: rgb(208, 206, 206);
   --border-width: 1px;
-  --border-radius: 0.5px
+  --border-radius: 0.5rem;
 
 
   --primary-color: #400040;
@@ -21,9 +21,9 @@
   --text-color: black;
   --background-color: white;
 
+  --button-hover-brightness: 0.8;
 
-  /*--------------dark-mode-------------------------------*/
-
+  --faint-grey: #2d374b;
 }
 
 .darkmode{

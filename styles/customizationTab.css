@@ -52,13 +52,19 @@
 
 .customization-page-title {
   display: flex;
+  background-color: var(--background-color);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 
-  border: 1px solid transparent;
+  border: var(--border-width) solid transparent;
   border-bottom-color: grey;
   padding: 20px;
+
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 
 .customization-page-body {
@@ -91,8 +97,8 @@
   padding: 10px;
   align-items: center;
   gap: 5px;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: var(--border-width) solid grey;
+  border-radius: var(--border-radius);
 }
 
 .color-choice input {
@@ -112,8 +118,8 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: var(--border-width) solid grey;
+  border-radius: var(--border-radius);
   margin-top: 10px;
 }
 
@@ -184,7 +190,7 @@ input:checked + .slider:before {
 /*-------------------------------------------customization page footer-----------------------*/
 
 .customization-page-footer {
-  position: absolute;
+  position: sticky;
   right: 0;
   bottom: 0;
   background-color: var(--background-color);
@@ -192,7 +198,7 @@ input:checked + .slider:before {
   padding: 20px;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid transparent;
+  border: var(--border-width) solid transparent;
   border-top-color: grey;
   visibility: hidden;
 }
@@ -200,7 +206,7 @@ input:checked + .slider:before {
 .customization-page-footer button {
   padding: 20px 30px;
   border: 0px solid transparent;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   font-size: medium;
 }
 

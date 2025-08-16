@@ -13,7 +13,7 @@ footer {
   padding: 60px 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .newsletter {
     flex-direction: column;
     padding: 40px 20px;
@@ -47,7 +47,7 @@ footer {
   background-color: var(--primary-color);
   border-color: transparent;
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 /*---------------------------------links-----------------------------------*/
@@ -168,7 +168,7 @@ footer {
   background-color: transparent;
   color: white;
   padding: 10px 30px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   border-color: #333d4c;
 }
 

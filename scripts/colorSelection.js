@@ -63,5 +63,7 @@ for (let colorChoice of colorChoices){
         else if (colorParagraph.id == "info-color"){
             document.documentElement.style.setProperty("--info-color", colorInputValue);
         }
+
+        showCustomizationFooter();
     });
 }
