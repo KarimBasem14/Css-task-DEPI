@@ -172,6 +172,13 @@ footer {
   border-color: #333d4c;
 }
 
+@media (max-width:800px){
+  .cities {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /*------------------------------------------------------------rights section-------------------------------------------*/
 
 .rights {

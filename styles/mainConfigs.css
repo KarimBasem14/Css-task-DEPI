@@ -107,3 +107,9 @@ i {
     font-size: x-large;
   }
 }
+
+/*Remove link's style*/
+a {
+  text-decoration: none;
+  color: inherit;
+}

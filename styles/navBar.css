@@ -88,11 +88,12 @@
 
 .nav-links li {
   padding: 20px;
+  border-radius: var(--border-radius);
 }
 
 .nav-links li:hover {
-  /* background-color: var(--link-hover-color); */
-  filter: brightness(--button-hover-brightness);
+  background-color: var(--faint-grey);
+  /* filter: brightness(--button-hover-brightness); */
   cursor: pointer;
 }
 
